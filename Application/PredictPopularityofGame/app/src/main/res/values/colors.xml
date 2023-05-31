@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple">#4C53B4</color>
+    <color name="gray_CBCBCB">#CBCBCB</color>
+    <color name="gray_6C6C6C">#6C6C6C</color>
+    <color name="gray_939393">#939393</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="average">#fecf06</color>
+    <color name="good">#8fc73e</color>
+    <color name="excellent">#31b44b</color>
+</resources>

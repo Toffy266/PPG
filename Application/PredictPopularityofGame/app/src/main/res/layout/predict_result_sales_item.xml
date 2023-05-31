@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/predict_result_sales"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white" >
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/CardView"
+        style="@style/Widget.Material3.CardView.Elevated"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="4dp"
+        app:strokeWidth="0dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="24dp" >
+
+            <!--  Name Game  -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/game_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:text="@string/game_name_text"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <!--  Rated  -->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/rated_img"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:padding="4dp"
+                android:src="@drawable/good"
+                android:layout_marginTop="20dp"/>
+
+            <!--  Sales  -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/predict_result_sales_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:text="@string/predict_result_title"
+                android:textColor="@color/purple"
+                android:textSize="20sp"
+                android:layout_marginTop="24dp" />
+
+            <!--  Unit  -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/unit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_black_italic"
+                android:gravity="center"
+                android:text="@string/unit_text"
+                android:textColor="@color/purple"
+                android:textSize="16sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

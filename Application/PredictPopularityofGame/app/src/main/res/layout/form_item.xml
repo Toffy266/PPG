@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/form_item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    android:background="@color/white" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/FormItemLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="150dp">
+
+        <!-- Game Name -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/form_game_text"
+            style="@style/TextForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/form_game_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/gameInputLayout"
+            style="@style/MyForm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/form_game_text"
+            app:layout_constraintStart_toStartOf="@+id/form_game_text"
+            app:layout_constraintTop_toBottomOf="@+id/form_game_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/form_game_input"
+                style="@style/TextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/game_pad_solid"
+                android:hint="@string/form_game_text"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Developer -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/form_developer_text"
+            style="@style/TextForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/form_developer_text"
+            app:layout_constraintEnd_toEndOf="@+id/form_game_text"
+            app:layout_constraintStart_toStartOf="@+id/form_game_text"
+            app:layout_constraintTop_toBottomOf="@+id/gameInputLayout" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/developerInputLayout"
+            style="@style/MyForm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/form_game_text"
+            app:layout_constraintStart_toStartOf="@+id/form_game_text"
+            app:layout_constraintTop_toBottomOf="@+id/form_developer_text">
+
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/form_developer_input"
+                style="@style/AutoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/user_group_solid"
+                android:hint="@string/form_developer_text"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Publisher -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/form_publisher_text"
+            style="@style/TextForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/form_publisher_text"
+            app:layout_constraintEnd_toEndOf="@+id/form_game_text"
+            app:layout_constraintStart_toStartOf="@+id/form_game_text"
+            app:layout_constraintTop_toBottomOf="@+id/developerInputLayout" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/publisherInputLayout"
+            style="@style/MyForm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/form_game_text"
+            app:layout_constraintStart_toStartOf="@+id/form_game_text"
+            app:layout_constraintTop_toBottomOf="@+id/form_publisher_text">
+
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                style="@style/AutoCompleteTextView"
+                android:id="@+id/form_publisher_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/book_open_reader_solid"
+                android:hint="@string/form_publisher_text"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Release Date -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/form_release_date_text"
+            style="@style/TextForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/form_release_date_text"
+            app:layout_constraintEnd_toEndOf="@+id/form_game_text"
+            app:layout_constraintStart_toStartOf="@+id/form_game_text"
+            app:layout_constraintTop_toBottomOf="@+id/publisherInputLayout" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/releaseDateInputLayout"
+            style="@style/MyForm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/form_game_text"
+            app:layout_constraintStart_toStartOf="@+id/form_game_text"
+            app:layout_constraintTop_toBottomOf="@+id/form_release_date_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/form_release_date_input"
+                style="@style/TextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/calendar_days_solid"
+                android:hint="@string/form_release_date_hint"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:inputType="date" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Price -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/form_price_text"
+            style="@style/TextForm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/form_price_text"
+            app:layout_constraintEnd_toStartOf="@id/form_achievement_text"
+            app:layout_constraintStart_toStartOf="@+id/form_game_text"
+            app:layout_constraintTop_toBottomOf="@+id/releaseDateInputLayout" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/priceInputLayout"
+            style="@style/MyForm"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/achievementInputLayout"
+            app:layout_constraintEnd_toEndOf="@+id/form_price_text"
+            app:layout_constraintStart_toStartOf="@+id/form_game_text"
+            app:layout_constraintTop_toTopOf="@id/achievementInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/form_price_input"
+                style="@style/TextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableStart="@drawable/sack_dollar_solid"
+                android:hint="@string/form_price_hint"
+                android:inputType="numberDecimal" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Achievement -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/form_achievement_text"
+            style="@style/TextForm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:singleLine="true"
+            android:text="@string/form_achievement_text"
+            app:layout_constraintEnd_toEndOf="@+id/form_game_text"
+            app:layout_constraintStart_toEndOf="@id/form_price_text"
+            app:layout_constraintTop_toBottomOf="@+id/releaseDateInputLayout" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/achievementInputLayout"
+            style="@style/MyForm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/form_game_text"
+            app:layout_constraintStart_toStartOf="@+id/form_achievement_text"
+            app:layout_constraintTop_toBottomOf="@+id/form_achievement_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/form_achievement_input"
+                style="@style/TextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/award_solid"
+                android:hint="@string/count_hint"
+                android:inputType="numberSigned" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Average Playtime -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/form_average_playtime_text"
+            style="@style/TextForm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/form_average_playtime_text"
+            app:layout_constraintEnd_toEndOf="@id/form_price_text"
+            app:layout_constraintStart_toStartOf="@+id/form_game_text"
+            app:layout_constraintTop_toBottomOf="@+id/priceInputLayout" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/averagePlaytimeInputLayout"
+            style="@style/MyForm"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/medianPlaytimeInputLayout"
+            app:layout_constraintEnd_toEndOf="@+id/form_price_text"
+            app:layout_constraintStart_toStartOf="@+id/form_game_text"
+            app:layout_constraintTop_toTopOf="@id/medianPlaytimeInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/form_average_playtime_input"
+                style="@style/TextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableStart="@drawable/clock_solid"
+                android:hint="@string/form_average_playtime_hint"
+                android:inputType="numberSigned" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Median Playtime-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/form_median_playtime_text"
+            style="@style/TextForm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:singleLine="true"
+            android:text="@string/form_median_playtime_text"
+            app:layout_constraintEnd_toEndOf="@+id/form_game_text"
+            app:layout_constraintStart_toStartOf="@id/form_achievement_text"
+            app:layout_constraintTop_toBottomOf="@+id/achievementInputLayout" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/medianPlaytimeInputLayout"
+            style="@style/MyForm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/form_game_text"
+            app:layout_constraintStart_toStartOf="@+id/form_achievement_text"
+            app:layout_constraintTop_toBottomOf="@+id/form_median_playtime_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/form_median_playtime_input"
+                style="@style/TextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/clock_solid"
+                android:hint="@string/form_median_playtime_hint"
+                android:inputType="numberSigned" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Positive Rating -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/form_positive_text"
+            style="@style/TextForm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/form_positive_text"
+            app:layout_constraintEnd_toEndOf="@id/form_price_text"
+            app:layout_constraintStart_toStartOf="@+id/form_game_text"
+            app:layout_constraintTop_toBottomOf="@+id/averagePlaytimeInputLayout" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/positiveInputLayout"
+            style="@style/MyForm"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/negativeInputLayout"
+            app:layout_constraintEnd_toEndOf="@+id/form_price_text"
+            app:layout_constraintStart_toStartOf="@+id/form_game_text"
+            app:layout_constraintTop_toTopOf="@id/negativeInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/form_positive_input"
+                style="@style/TextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableStart="@drawable/thumbs_up_solid"
+                android:hint="@string/count_hint"
+                android:inputType="numberSigned" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Negative Rating -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/form_negative_text"
+            style="@style/TextForm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:singleLine="true"
+            android:text="@string/form_negative_text"
+            app:layout_constraintEnd_toEndOf="@+id/form_game_text"
+            app:layout_constraintStart_toStartOf="@id/form_achievement_text"
+            app:layout_constraintTop_toBottomOf="@+id/medianPlaytimeInputLayout" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/negativeInputLayout"
+            style="@style/MyForm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/form_game_text"
+            app:layout_constraintStart_toStartOf="@+id/form_achievement_text"
+            app:layout_constraintTop_toBottomOf="@+id/form_negative_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/form_negative_input"
+                style="@style/TextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/thumbs_down_solid"
+                android:hint="@string/count_hint"
+                android:inputType="numberSigned" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Platform -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/form_platforms_text"
+            style="@style/TextForm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/form_platforms_text"
+            android:drawableStart="@drawable/computer_solid"
+            android:drawablePadding="8dp"
+            app:layout_constraintStart_toStartOf="@+id/form_game_text"
+            app:layout_constraintTop_toBottomOf="@+id/positiveInputLayout" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/form_platforms_mac_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/form_platforms_mac_text"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toStartOf="@id/form_platforms_linux_input"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@+id/form_game_text"
+            app:layout_constraintTop_toBottomOf="@+id/form_platforms_text" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/form_platforms_linux_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/form_platforms_linux_text"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/form_platforms_mac_input"
+            app:layout_constraintEnd_toStartOf="@id/form_platforms_window_input"
+            app:layout_constraintStart_toEndOf="@id/form_platforms_mac_input"
+            app:layout_constraintTop_toTopOf="@id/form_platforms_mac_input" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/form_platforms_window_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/form_platforms_window_text"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/form_platforms_mac_input"
+            app:layout_constraintEnd_toEndOf="@id/form_game_text"
+            app:layout_constraintStart_toEndOf="@id/form_platforms_linux_input"
+            app:layout_constraintTop_toTopOf="@id/form_platforms_mac_input" />
+
+        <!-- Genres -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/form_genres_text"
+            style="@style/TextForm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/form_genres_text"
+            android:drawableStart="@drawable/list_ul_solid"
+            android:drawablePadding="8dp"
+            app:layout_constraintStart_toStartOf="@+id/form_game_text"
+            app:layout_constraintTop_toBottomOf="@+id/form_platforms_mac_input" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/genresRecycleView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="-10dp"
+            android:orientation="horizontal"
+            app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+            tools:listitem="@layout/form_item_child"
+            app:layout_constraintEnd_toEndOf="@+id/form_game_text"
+            app:layout_constraintStart_toEndOf="@+id/form_genres_text"
+            app:layout_constraintTop_toTopOf="@+id/form_genres_text" />
+
+        <!-- Categories -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/form_categories_text"
+            style="@style/TextForm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/form_categories_text"
+            android:drawableStart="@drawable/search_categories_icon"
+            android:drawablePadding="8dp"
+            app:layout_constraintStart_toStartOf="@+id/form_game_text"
+            app:layout_constraintTop_toBottomOf="@+id/genresRecycleView" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/categoriesRecycleView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="-10dp"
+            android:orientation="horizontal"
+            app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+            tools:listitem="@layout/form_item_child"
+            app:layout_constraintEnd_toEndOf="@+id/form_game_text"
+            app:layout_constraintStart_toEndOf="@+id/form_categories_text"
+            app:layout_constraintTop_toTopOf="@+id/form_categories_text" />
+
+        <!-- Game Tags -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/form_game_tags_text"
+            style="@style/TextForm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/form_game_tags_text"
+            android:drawableStart="@drawable/hashtag_solid"
+            android:drawablePadding="8dp"
+            app:layout_constraintStart_toStartOf="@+id/form_game_text"
+            app:layout_constraintTop_toBottomOf="@+id/categoriesRecycleView" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tagsRecycleView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="-10dp"
+            android:orientation="horizontal"
+            app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+            tools:listitem="@layout/form_item_child"
+            app:layout_constraintEnd_toEndOf="@+id/form_game_text"
+            app:layout_constraintStart_toEndOf="@+id/form_game_tags_text"
+            app:layout_constraintTop_toTopOf="@+id/form_game_tags_text" />
+
+        <!-- Button-->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/start_predict_button"
+            style="@style/PrimaryButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/start_predict_button_text"
+            app:layout_constraintEnd_toEndOf="@+id/form_game_text"
+            app:layout_constraintStart_toStartOf="@id/form_game_text"
+            app:layout_constraintTop_toBottomOf="@id/tagsRecycleView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

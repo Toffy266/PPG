@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">PPG</string>
+    <string name="splash_screen_text">Predict Popularity of Game</string>
+
+    <string name="on_boarding_title">About App</string>
+    <string name="on_boarding_content">This app is an app for predicting the popularity of a game where the predicted result is the estimated number of sales of the game (downloads).</string>
+    <string name="on_boarding_button_text">Get Started</string>
+
+    <string name="choose_text">Choose</string>
+    <string name="choose_button_text">Choose</string>
+
+    <string name="check_rating_title">Does your game \nalready have rating ?</string>
+
+    <string name="form_title">GAME INFORMATION</string>
+    <string name="form_game_text">Game Name</string>
+    <string name="form_developer_text">Developer Name</string>
+    <string name="form_publisher_text">Publisher Name</string>
+    <string name="form_release_date_text">Release Date</string>
+    <string name="form_release_date_hint">yyyy/MM/dd</string>
+    <string name="form_price_text">Price</string>
+    <string name="form_price_hint">GBP (£)</string>
+    <string name="form_achievement_text">Achievements</string>
+    <string name="form_average_playtime_text">Average Playtime</string>
+    <string name="form_average_playtime_hint">Hours</string>
+    <string name="form_median_playtime_text">Median Playtime</string>
+    <string name="form_median_playtime_hint">Hours</string>
+    <string name="form_positive_text">Positive Ratings</string>
+    <string name="form_negative_text">Negative Ratings</string>
+    <string name="form_platforms_text">Platforms</string>
+    <string name="form_platforms_window_text">Windows</string>
+    <string name="form_platforms_mac_text">Mac</string>
+    <string name="form_platforms_linux_text">Linux</string>
+    <string name="form_genres_text">Genres</string>
+    <string name="form_categories_text">Categories</string>
+    <string name="form_game_tags_text">Game Tags</string>
+    <string name="form_dialog_title">CHOOSE</string>
+
+    <string name="start_predict_button_text">Start Predict</string>
+    <string name="count_hint">Count</string>
+    <string name="confirm_button_text">CONFIRM</string>
+    <string name="game_name_text">Game Name</string>
+    <string name="unit_text">(downloads)</string>
+
+    <string name="predict_result_title">ESTIMATED SALES</string>
+    <string name="predict_result_button_text">Predict Again</string>
+
+    <string name="features_text">Features</string>
+    <string name="positive_features_text">Positive Features</string>
+    <string name="negative_features_text">Negative Features</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+</resources>
